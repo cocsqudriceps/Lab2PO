@@ -40,14 +40,16 @@ namespace Lab1
                 }
                 return result;
             }
-            public static double OperationsWithOneNumber(double number, string switch_on){
+            public static double OperationsWithOneNumber(double number, char switch_on){
                 double result = 0;
                 switch (switch_on)
                 {
-                    case "cos":
+                    case 'c':
                         result = Cosinus(number);
                         break;
-                    
+                    case 's':
+                        result = Sinus(number);
+                        break;
                     default:
                         System.Console.WriteLine("Invalid selection.");
                         OperationsWithOneNumber(number, switch_on);
@@ -72,6 +74,9 @@ namespace Lab1
             }
             public static double Cosinus(double a){
                 return Cos(a);
+            }
+            public static double Sinus(double a){
+                return Sin(a);
             }
     }
 }

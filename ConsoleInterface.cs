@@ -31,11 +31,11 @@ namespace Lab1
             }
             else if(choose == 2){
                 Console.Clear();
-                Console.WriteLine("Available operations: cos");
+                Console.WriteLine("Available operations: c - (cos), s - (sin)");
                 String expression = Console.ReadLine();
-                String pattern = @"(cos)\s+(\d+)";
+                String pattern = @"([cs])\s+(\d+)";
                 foreach (System.Text.RegularExpressions.Match m in System.Text.RegularExpressions.Regex.Matches(expression, pattern)) {
-                    String c = m.Groups[1].Value;
+                    Char c = Char.Parse(m.Groups[1].Value);
                     double a = Int32.Parse(m.Groups[2].Value);
                     
                     System.Console.WriteLine($"Result: {Logic.OperationsWithOneNumber(a, c)}");
