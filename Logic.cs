@@ -15,7 +15,7 @@ namespace Lab1
 /// <param name="c">Значок операции</param>
 /// <returns>Результат операции</returns>
             public static double Commands(double a, double b, char c){
-            double result;
+            double result = 0;
              switch (c)
             {
                 case '+':
@@ -25,18 +25,17 @@ namespace Lab1
                    result = Minus(a,b);
                     break;
                 case '*':
-                     result =Composition(a,b);
+                     result = Composition(a,b);
                      break;
                 case '/':
-                     result =Division(a,b);
+                     result = Division(a,b);
                      break;
                 case '^':
                     result = Exponentiation(a,b);
                     break;
                 default:
                     System.Console.WriteLine("Invalid selection.");
-                    System.Environment.Exit(1);
-                    result = 1;
+                    Commands(a,b,c);
                     break;
                 }
                 return result;
