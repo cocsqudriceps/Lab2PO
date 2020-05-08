@@ -50,6 +50,12 @@ namespace Lab1
                     case 's':
                         result = Sinus(number);
                         break;
+                    case 't':
+                        result = Tangens(number);
+                        break;
+                    case 'l':
+                        result = Logarithm(number);
+                        break;    
                     default:
                         System.Console.WriteLine("Invalid selection.");
                         OperationsWithOneNumber(number, switch_on);
@@ -77,6 +83,12 @@ namespace Lab1
             }
             public static double Sinus(double a){
                 return Sin(a);
+            }
+            public static double Tangens(double a){
+                return Tan(a);
+            }
+            public static double Logarithm(double a){
+                return Log(a);
             }
     }
 }
