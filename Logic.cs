@@ -14,8 +14,8 @@ namespace Lab1
 /// <param name="b">Значение 2 числа</param>
 /// <param name="c">Значок операции</param>
 /// <returns>Результат операции</returns>
-            public static double Commands(double a, double b, char c){
-            double result;
+            public static double SimpleOperations(double a, double b, char c){
+            double result = 0;
              switch (c)
             {
                 case '+':
@@ -25,19 +25,35 @@ namespace Lab1
                    result = Minus(a,b);
                     break;
                 case '*':
-                     result =Composition(a,b);
+                     result = Composition(a,b);
                      break;
                 case '/':
-                     result =Division(a,b);
+                     result = Division(a,b);
                      break;
                 case '^':
                     result = Exponentiation(a,b);
                     break;
                 default:
                     System.Console.WriteLine("Invalid selection.");
-                    System.Environment.Exit(1);
-                    result = 1;
+                    SimpleOperations(a,b,c);
                     break;
+                }
+                return result;
+            }
+            public static double OperationsWithOneNumber(double number, char switch_on){
+                double result = 0;
+                switch (switch_on)
+                {
+                    case 'c':
+                        result = Cosinus(number);
+                        break;
+                    case 's':
+                        result = Sinus(number);
+                        break;
+                    default:
+                        System.Console.WriteLine("Invalid selection.");
+                        OperationsWithOneNumber(number, switch_on);
+                        break;
                 }
                 return result;
             }
@@ -55,6 +71,12 @@ namespace Lab1
             }
             public static double Exponentiation (double a, double b){
                 return Pow(a,b) ;
+            }
+            public static double Cosinus(double a){
+                return Cos(a);
+            }
+            public static double Sinus(double a){
+                return Sin(a);
             }
     }
 }

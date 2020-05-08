@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IMxxdrAqOUW6arxpbvB0IRdvzlF2pZ31Zu2gFRS71hBKb8aGuJYYDAJW7diJX3q4sA7mkQcYju+1l+Hs32/Ciw==",
+  "dgSpecHash": "K2uezCHGb572RiB6HsrZUl/8OyO3l3gdh6Hmefjf0BJAhpvMIHsXLxeJNt+ABkinOvKEYPQoj/sJAXldXwV/DQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\cocsq\\Desktop\\Lab1\\Lab1.csproj",
+  "projectFilePath": "C:\\Users\\cocsq\\Desktop\\Lab2\\Lab1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cocsq\\.nuget\\packages\\microsoft.codecoverage\\16.6.0\\microsoft.codecoverage.16.6.0.nupkg.sha512",
     "C:\\Users\\cocsq\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
