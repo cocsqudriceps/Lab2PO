@@ -14,7 +14,7 @@ namespace Lab1
 /// <param name="b">Значение 2 числа</param>
 /// <param name="c">Значок операции</param>
 /// <returns>Результат операции</returns>
-            public static double Commands(double a, double b, char c){
+            public static double SimpleOperations(double a, double b, char c){
             double result = 0;
              switch (c)
             {
@@ -35,8 +35,23 @@ namespace Lab1
                     break;
                 default:
                     System.Console.WriteLine("Invalid selection.");
-                    Commands(a,b,c);
+                    SimpleOperations(a,b,c);
                     break;
+                }
+                return result;
+            }
+            public static double OperationsWithOneNumber(double number, string switch_on){
+                double result = 0;
+                switch (switch_on)
+                {
+                    case "cos":
+                        result = Cosinus(number);
+                        break;
+                    
+                    default:
+                        System.Console.WriteLine("Invalid selection.");
+                        OperationsWithOneNumber(number, switch_on);
+                        break;
                 }
                 return result;
             }
@@ -54,6 +69,9 @@ namespace Lab1
             }
             public static double Exponentiation (double a, double b){
                 return Pow(a,b) ;
+            }
+            public static double Cosinus(double a){
+                return Cos(a);
             }
     }
 }
