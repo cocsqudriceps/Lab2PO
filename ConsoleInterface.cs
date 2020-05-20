@@ -31,9 +31,9 @@ namespace Lab1
             }
             else if(choose == 2){
                 Console.Clear();
-                Console.WriteLine("Available operations: c - (cos), s - (sin), t - (tan), l - (log)");
+                Console.WriteLine("Available operations: c - (cos), s - (sin), t - (tan), l - (log), @ - (sqrt)");
                 String expression = Console.ReadLine();
-                String pattern = @"([cstl])\s+(\d+)";
+                String pattern = @"([cstl@])\s+(\d+)";
                 foreach (System.Text.RegularExpressions.Match m in System.Text.RegularExpressions.Regex.Matches(expression, pattern)) {
                     Char c = Char.Parse(m.Groups[1].Value);
                     double a = Int32.Parse(m.Groups[2].Value);

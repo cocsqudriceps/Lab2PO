@@ -56,6 +56,9 @@ namespace Lab1
                     case 'l':
                         result = Logarithm(number);
                         break;    
+                    case '@':
+                        result = Sqrting(number);
+                        break;
                     default:
                         System.Console.WriteLine("Invalid selection.");
                         OperationsWithOneNumber(number, switch_on);
@@ -77,6 +80,9 @@ namespace Lab1
             }
             public static double Exponentiation (double a, double b){
                 return Pow(a,b) ;
+            }
+            public static double Sqrting (double a){
+                return Sqrt(a);
             }
             public static double Cosinus(double a){
                 return Cos(a);
