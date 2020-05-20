@@ -59,7 +59,7 @@ namespace Lab1
                     case '@':
                         result = Sqrting(number);
                         break;
-                    case "e":
+                    case 'e':
                         result = Expanent(number);
                         break;
                     default:
