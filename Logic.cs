@@ -59,6 +59,9 @@ namespace Lab1
                     case '@':
                         result = Sqrting(number);
                         break;
+                    case "e":
+                        result = Expanent(number);
+                        break;
                     default:
                         System.Console.WriteLine("Invalid selection.");
                         OperationsWithOneNumber(number, switch_on);
@@ -95,6 +98,9 @@ namespace Lab1
             }
             public static double Logarithm(double a){
                 return Log(a);
+            }
+            public static double Expanent(double a){
+                return Exp(a);
             }
     }
 }
